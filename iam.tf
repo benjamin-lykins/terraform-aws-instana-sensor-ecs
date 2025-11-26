@@ -12,12 +12,12 @@ data "aws_iam_policy_document" "instana_sensor_assume_role_policy" {
 }
 
 resource "aws_iam_role" "instana" {
-  name               = "instana-sensor-task-execution-role"
+  name_prefix        = "instana-sensor-"
   assume_role_policy = data.aws_iam_policy_document.instana_sensor_assume_role_policy.json
 }
 
 resource "aws_iam_policy" "instana_sensor_policy" {
-  name        = "instana-sensor-task-execution-policy"
+  name_prefix = "instana-sensor-"
   description = "Policy for Instana Sensor ECS Task Execution Role"
   policy      = file("${path.module}/templates/IAMpermissions.json.tftpl")
 }
