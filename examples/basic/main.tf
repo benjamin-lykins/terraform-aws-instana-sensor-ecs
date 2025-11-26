@@ -13,7 +13,7 @@ provider "aws" {
 
 
 module "instana_sensor_ecs" {
-  source = "../"
+  source = "../.."
 
   instana_agent_key      = var.instana_agent_key
   instana_agent_endpoint = var.instana_agent_endpoint
