@@ -1,6 +1,4 @@
-###
 # Network Variables
-###
 
 variable "vpc_id" {
   description = "The VPC ID to provision the ECS service."
@@ -12,9 +10,7 @@ variable "subnets" {
   type        = list(string)
 }
 
-###
 # ECS Variables
-###
 
 variable "create_ecs_cluster" {
   description = "Whether to create a new ECS cluster."
@@ -51,9 +47,7 @@ variable "security_group_id" {
   default     = ""
 }
 
-###
 # Instana Variables
-###
 
 variable "instana_agent_key" {
   description = "The Instana Agent Key for authentication with the Instana backend."
