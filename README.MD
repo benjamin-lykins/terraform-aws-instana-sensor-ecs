@@ -6,7 +6,16 @@ Using this module, you can deploy the Instana Sensor on an ECS cluster using Far
 
 There is an example usage of this module in the `example/` directory. Which you can refer to for guidance on how to use this module in your own Terraform configuration.
 
+### Prerequisites
 
+- An AWS account with necessary permissions to create ECS clusters, services, task definitions, IAM roles, and security groups.
+- AWS VPC and subnets where the ECS service will be deployed.
+- An Instana account with an Agent Key for authentication.
+
+#### Optional
+
+- If there is an existing ECS cluster and security group(s) you wish to use, you can provide their identifiers as inputs to the module.
+- By default, the module will create a new ECS cluster and security group if not provided.
 
 <!-- BEGIN_TF_DOCS -->
 ## Requirements
